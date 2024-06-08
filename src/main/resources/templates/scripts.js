@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const taskId = document.getElementById('getTaskId').value;
         try {
-            const response = await fetch(`/tasks/${taskId}`);
+            const response = await fetch(`http://localhost:8080/tasks/${taskId}`);
             const task = await response.json();
             displaySingleTask(task);
         } catch (error) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: document.getElementById('newTaskDescription').value
         };
         try {
-            const response = await fetch('/tasks', {
+            const response = await fetch('http://localhost:8080/tasks', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(newTask)
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: document.getElementById('updateTaskDescription').value
         };
         try {
-            const response = await fetch(`/tasks/${updatedTask.id}`, {
+            const response = await fetch(`http://localhost:8080/tasks/${updatedTask.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updatedTask)
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const taskId = document.getElementById('deleteTaskId').value;
         try {
-            const response = await fetch(`/tasks/${taskId}`, {
+            const response = await fetch(`http://localhost:8080/tasks/${taskId}`, {
                 method: 'DELETE'
             });
             if (response.ok) {
