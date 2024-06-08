@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Management Application</h1>
+
+        <!-- Section to display all tasks -->
+        <section id="allTasksSection">
+            <h2>All Tasks</h2>
+            <button id="fetchAllTasksBtn">Fetch All Tasks</button>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Section to get a single task by ID -->
+        <section id="getTaskSection">
+            <h2>Get Task by ID</h2>
+            <form id="getTaskForm">
+                <label for="getTaskId">Task ID:</label>
+                <input type="number" id="getTaskId" required>
+                <button type="submit">Get Task</button>
+            </form>
+            <div id="singleTaskDetails" class="hidden"></div>
+        </section>
+
+        <!-- Section to add a new task -->
+        <section id="addTaskSection">
+            <h2>Add New Task</h2>
+            <form id="addTaskForm">
+                <label for="newTaskId">Task ID:</label>
+                <input type="number" id="newTaskId" required>
+                <label for="newTaskName">Task Name:</label>
+                <input type="text" id="newTaskName" required>
+                <label for="newTaskDescription">Task Description:</label>
+                <textarea id="newTaskDescription" required></textarea>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Section to update an existing task -->
+        <section id="updateTaskSection">
+            <h2>Update Task</h2>
+            <form id="updateTaskForm">
+                <label for="updateTaskId">Task ID:</label>
+                <input type="number" id="updateTaskId" required>
+                <label for="updateTaskName">Task Name:</label>
+                <input type="text" id="updateTaskName" required>
+                <label for="updateTaskDescription">Task Description:</label>
+                <textarea id="updateTaskDescription" required></textarea>
+                <button type="submit">Update Task</button>
+            </form>
+        </section>
+
+        <!-- Section to delete a task -->
+        <section id="deleteTaskSection">
+            <h2>Delete Task</h2>
+            <form id="deleteTaskForm">
+                <label for="deleteTaskId">Task ID:</label>
+                <input type="number" id="deleteTaskId" required>
+                <button type="submit">Delete Task</button>
+            </form>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
