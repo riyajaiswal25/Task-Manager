@@ -4,7 +4,7 @@
 
 The Task Manager Application is a web-based platform developed using Spring Boot for managing tasks efficiently. It allows users to create, view, update, and delete tasks easily.
 
-##Landing Page
+## Landing Page
 ![Screenshot 2024-06-08 234720](https://github.com/riyajaiswal25/Task-Manager/assets/84279900/87d99b8a-8af6-408d-a555-c44c0d4dc44c)
 
 
